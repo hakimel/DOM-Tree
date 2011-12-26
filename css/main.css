@@ -76,12 +76,13 @@ header {
 		margin-top: 7px;
 	}
 
-	header .share .facebook {
-		margin-top: 7px;
-	}
-
 	header .share .plusone {
 		margin-top: 5px;
+	}
+
+	header .share .facebook {
+		margin-top: 7px;
+		margin-right: 130px;
 	}
 
 
