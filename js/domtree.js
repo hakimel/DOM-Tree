@@ -1,15 +1,15 @@
 (function(){
 
 	var supports3DTransforms =  document.body.style['perspectiveProperty'] !== undefined ||
-								document.body.style['WebkitPerspective'] !== undefined || 
+								document.body.style['WebkitPerspective'] !== undefined ||
                         		document.body.style['MozPerspective'] !== undefined ||
                         		document.body.style['msPerspective'] !== undefined ||
                         		document.body.style['OPerspective'] !== undefined;
-    
+
     if( !supports3DTransforms ) {
     	alert( 'Your browser doesn\'t support CSS3 3D transforms :/' );
     }
-	
+
 	function transform( element, value ) {
 		element.style.WebkitTransform = value;
 		element.style.MozTransform = value;
@@ -31,23 +31,23 @@
 	tree.style.height = height + 'px';
 
 	window.addEventListener( 'resize', resize, false );
-	
+
 	// The tree
 	for( var i = 0; i < quantity; i++ ) {
 		var element = null,
 			type = types[ Math.floor( Math.random() * types.length ) ],
 			greeting = greetings[ Math.floor( Math.random() * greetings.length ) ];
-		
+
 		var x = width/2,
 			y = Math.round( Math.random() * height );
 
 		var rx = 0,
 			ry = Math.random() * 360,
 			rz = -Math.random() * 15;
- 		
+
 		var elemenWidth = 5 + ( ( y / height ) * width / 2 ),
 			elemenHeight = 26;
-		
+
 		switch( type ) {
 			case 'button':
 				element = document.createElement( 'button' );
@@ -97,7 +97,7 @@
 				element.style.width = elemenWidth + 'px';
 				element.style.height = elemenHeight + 'px';
 		}
-		
+
 		transform( element, 'translate3d('+x+'px, '+y+'px, 0px) rotateX('+rx+'deg) rotateY('+ry+'deg) rotateZ('+rz+'deg)' );
 
 		tree.appendChild( element );
@@ -117,7 +117,7 @@
 		var rx = 0,
 			ry = Math.random() * 360,
 			rz = 0;
- 		
+
  		if( Math.random() > 0.5 ) element.setAttribute( 'checked', '' );
 
 		transform( element, 'translate3d('+x+'px, '+y+'px, '+z+'px) rotateX('+rx+'deg) rotateY('+ry+'deg) rotateZ('+rz+'deg)' );
