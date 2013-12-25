@@ -104,11 +104,11 @@
 	}
 
 	// The snow
-	for( var i = 0; i < 100; i++ ) {
+	for( var i = 0; i < 200; i++ ) {
 		var element = document.createElement( 'input' );
 		element.setAttribute( 'type', 'radio' );
 
-		var spread = width * 1.5;
+		var spread = width * 2;
 
 		var x = Math.round( Math.random() * spread ) - ( spread / 4 ),
 			y = Math.round( Math.random() * height ),
