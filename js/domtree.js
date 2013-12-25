@@ -2,13 +2,13 @@
 
 	var supports3DTransforms =  document.body.style['perspectiveProperty'] !== undefined ||
 								document.body.style['WebkitPerspective'] !== undefined ||
-                        		document.body.style['MozPerspective'] !== undefined ||
-                        		document.body.style['msPerspective'] !== undefined ||
-                        		document.body.style['OPerspective'] !== undefined;
+								document.body.style['MozPerspective'] !== undefined ||
+								document.body.style['msPerspective'] !== undefined ||
+								document.body.style['OPerspective'] !== undefined;
 
-    if( !supports3DTransforms ) {
-    	alert( 'Your browser doesn\'t support CSS3 3D transforms :/' );
-    }
+	if( !supports3DTransforms ) {
+		alert( 'Your browser doesn\'t support CSS3 3D transforms :/' );
+	}
 
 	function transform( element, value ) {
 		element.style.WebkitTransform = value;
@@ -118,7 +118,7 @@
 			ry = Math.random() * 360,
 			rz = 0;
 
- 		if( Math.random() > 0.5 ) element.setAttribute( 'checked', '' );
+		if( Math.random() > 0.5 ) element.setAttribute( 'checked', '' );
 
 		transform( element, 'translate3d('+x+'px, '+y+'px, '+z+'px) rotateX('+rx+'deg) rotateY('+ry+'deg) rotateZ('+rz+'deg)' );
 
