@@ -8,4 +8,4 @@ Happy holidays! I didn't get a pine tree for Christmas this year so I decided to
 
 MIT licensed
 
-Copyright (C) 2011 Hakim El Hattab, http://hakim.se
+Copyright (C) 2017 Hakim El Hattab, http://hakim.se
