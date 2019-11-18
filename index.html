@@ -16,44 +16,87 @@
 
     </head>
     <body>
-    	<header>
-    		<h1>DOM Tree</h1>
-
-    		<span class="attribution"> <a href="http://hakim.se/experiments/domtree">about this experiment</a> | created by <a href="http://twitter.com/hakimel">@hakimel</a></span>
-
-    		<div class="share">
-	    		<div class="facebook">
-	    			<iframe id="facebook-button" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhakim.se%2Fexperiments%2Fcss%2Fdomtree%2F&amp;layout=button_count&amp;show_faces=false&amp;width=105&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=40" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:40px;" allowTransparency="true"></iframe>
-	    		</div>
-				<div class="twitter">
-					<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://hakim.se/experiments/css/domtree/" data-text="A Christmas tree made out of form elements! Created by @hakimel" data-count="horizontal" data-related="hakimel">Tweet</a>
-
-				</div>
-				<div class="plusone">
-					<div class="g-plusone" data-size="medium"></div>
-				</div>
-    		</div>
-    	</header>
-
     	<div class="tree"></div>
 
 		<script src="js/domtree.js"></script>
 
-		<!-- Third party tracking and sharing code below -->
-		<a href="https://github.com/hakimel/dom-tree"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+		<!-- Third party scripts and sharing UI -->
+		<p class="project-title">DOM Tree</p>
 
-		<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-15240703-1']);
-		  _gaq.push(['_trackPageview']);
+		<div class="credits">
+			<a href="https://github.com/hakimel/dom-tree">Source on GitHub</a>
+			<a href="https://twitter.com/share?text=A%20Christmas%20tree%20made%20out%20of%20form%20elements&url=http://lab.hakim.se/domtree&via=hakimel&related=hakimel" target="_blank">Tweet this</a>
+			<a href="https://twitter.com/hakimel">Follow @hakimel</a>
+		</div>
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+		<style type="text/css" media="screen">
+			.project-title {
+				position: absolute;
+				left: 25px;
+				bottom: 20px;
+
+				font-size: 16px;
+				color: #fff;
+			}
+
+			.credits {
+				position: absolute;
+				right: 20px;
+				bottom: 25px;
+				font-size: 15px;
+				z-index: 20;
+				color: #fff;
+				vertical-align: middle;
+			}
+
+			.credits * + * {
+				margin-left: 15px;
+			}
+
+			.credits a {
+				padding: 8px 10px;
+				color: rgba(255,255,255,0.7);
+				border: 2px solid rgba(255,255,255,0.7);
+				text-decoration: none;
+			}
+
+			.credits a:hover {
+				border-color: #fff;
+				color: #fff;
+			}
+
+			@media screen and (max-width: 1040px) {
+				.project-title {
+					display: none;
+				}
+
+				.credits {
+					width: 100%;
+					left: 0;
+					right: auto;
+					bottom: 0;
+					padding: 30px 0;
+					background: #b72424;
+					text-align: center;
+				}
+
+				.credits a {
+					display: inline-block;
+					margin-top: 7px;
+					margin-bottom: 7px;
+				}
+			}
+		</style>
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+			(function(d, t) {
+			var g = d.createElement(t),
+			    s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+			})(document, 'script');
 		</script>
 
     </body>
